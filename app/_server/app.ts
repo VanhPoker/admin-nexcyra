@@ -5,5 +5,5 @@ export const app = createApp({
   schema,
 
 
-  secretKey: process.env.SECRET_KEY || 'mN2zpvsnVtamDACAOM8ffVjx',
+  secretKey: 'jzNAEsnmybrntoU1TtXQuxHOuzzqum3WjULZholmpMtDpbxe',
 });

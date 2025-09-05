@@ -12,15 +12,19 @@
   ],
   "routes": [
     {
+      "src": "/internal-api(.*)",
+      "dest": "dist/server/server.cjs"
+    },
+    {
       "src": "/api/(.*)",
       "dest": "dist/server/server.cjs"
     },
     {
-      "src": "/(.*)",
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|json))",
       "dest": "dist/client/$1"
     },
     {
-      "src": "/",
+      "src": "/(.*)",
       "dest": "dist/client/index.html"
     }
   ]

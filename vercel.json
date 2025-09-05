@@ -1,20 +1,27 @@
 {
   "version": 2,
-  "buildCommand": "pnpm build",
-  "outputDirectory": "dist/client",
+  "builds": [
+    {
+      "src": "dist/server/server.cjs",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "dist/client/**",
+      "use": "@vercel/static"
+    }
+  ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/dist/server/server.cjs"
+      "dest": "dist/server/server.cjs"
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "dist/client/$1"
+    },
+    {
+      "src": "/",
+      "dest": "dist/client/index.html"
     }
-  ],
-  "functions": {
-    "dist/server/server.cjs": {
-      "runtime": "nodejs18.x"
-    }
-  }
+  ]
 }

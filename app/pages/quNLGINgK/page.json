@@ -1,0 +1,273 @@
+{
+  "version": "1.0",
+  "type": "table",
+  "title": "Quản lý gói đăng ký ",
+  "hideInSidebar": false,
+  "config": {
+    "dataSource": "postgres_db_gceijz",
+    "fetchStrategy": "databaseTable",
+    "table": "user_limits",
+    "columns": [
+      {
+        "column": "user_id",
+        "label": "User- Tên người dùng ",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": false,
+        "position": 0,
+        "relationshipPreviewColumns": [
+          "name"
+        ],
+        "fieldInput": {
+          "type": "recordSelect",
+          "asArray": false
+        },
+        "fieldRequirement": "notEmpty",
+        "formFieldSpan": "12"
+      },
+      {
+        "column": "id",
+        "label": "Id",
+        "hiddenInTable": true,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": false,
+        "position": 1,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "notEmpty",
+        "formFieldSpan": "12",
+        "id": "id"
+      },
+      {
+        "column": "stripe_customer_id",
+        "label": "ID- Stripe-khách hàng ",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 2,
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12"
+      },
+      {
+        "column": "subscription_type",
+        "label": "Tên gói đăng ký ",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 3,
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12"
+      },
+      {
+        "column": "stripe_subscription_id",
+        "label": "Stripe subscription id",
+        "hiddenInTable": true,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 4,
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12"
+      },
+      {
+        "column": "subscription_status",
+        "label": "Subscription status",
+        "hiddenInTable": true,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 5,
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "subscription_status"
+      },
+      {
+        "column": "is_deleted",
+        "label": "Is deleted",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": true,
+        "searchable": false,
+        "position": 6,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "checkbox",
+          "asArray": false
+        },
+        "fieldRequirement": "notEmpty",
+        "formFieldSpan": "12",
+        "id": "is_deleted"
+      },
+      {
+        "column": "monthly_call_minutes",
+        "label": "Monthly call minutes",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": true,
+        "searchable": false,
+        "position": 7,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "monthly_call_minutes"
+      },
+      {
+        "column": "profiles_created",
+        "label": "Profiles created",
+        "hiddenInTable": true,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": true,
+        "searchable": false,
+        "position": 8,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "numberInput",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "profiles_created"
+      },
+      {
+        "column": "relationships_created",
+        "label": "Relationships created",
+        "hiddenInTable": true,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": true,
+        "searchable": false,
+        "position": 9,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "numberInput",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "relationships_created"
+      },
+      {
+        "column": "created_at",
+        "label": "Created at",
+        "hiddenInTable": true,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": true,
+        "searchable": false,
+        "position": 10,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "dateTimePicker",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "created_at"
+      },
+      {
+        "column": "last_call_reset",
+        "label": "Last call reset",
+        "hiddenInTable": true,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": true,
+        "searchable": false,
+        "position": 11,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "datePicker",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "last_call_reset"
+      },
+      {
+        "column": "subscription_current_period_end",
+        "label": "Thời gian bắt đầu gói",
+        "hiddenInTable": true,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": true,
+        "searchable": false,
+        "position": 12,
+        "fieldInput": {
+          "type": "dateTimePicker",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12"
+      },
+      {
+        "column": "subscription_current_period_start",
+        "label": "Thời gian kết thúc gói",
+        "hiddenInTable": true,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": true,
+        "searchable": false,
+        "position": 13,
+        "fieldInput": {
+          "type": "dateTimePicker",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12"
+      },
+      {
+        "column": "updated_at",
+        "label": "Updated at",
+        "hiddenInTable": true,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": true,
+        "searchable": false,
+        "position": 14,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "dateTimePicker",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "updated_at"
+      }
+    ]
+  }
+}

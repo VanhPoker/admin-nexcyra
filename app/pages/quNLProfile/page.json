@@ -1,0 +1,636 @@
+{
+  "version": "1.0",
+  "type": "table",
+  "title": "Quản lý Profile ",
+  "hideInSidebar": false,
+  "config": {
+    "dataSource": "postgres_db_gceijz",
+    "fetchStrategy": "databaseTable",
+    "table": "profiles",
+    "columns": [
+      {
+        "column": "id",
+        "label": "Id",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": false,
+        "position": 0,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "notEmpty",
+        "formFieldSpan": "12",
+        "id": "id"
+      },
+      {
+        "column": "name",
+        "label": "Tên Profile",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 1,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "name"
+      },
+      {
+        "column": "created_by_user_id",
+        "label": "Tên người tạo",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": false,
+        "position": 2,
+        "relationshipPreviewColumns": [
+          "name"
+        ],
+        "fieldInput": {
+          "type": "recordSelect",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "created_by_user_id"
+      },
+      {
+        "column": "avatar_url",
+        "label": "Avatar url",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 3,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "avatar_url"
+      },
+      {
+        "column": "avoid",
+        "label": "Avoid",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 4,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": true
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "avoid"
+      },
+      {
+        "column": "cleaned_voice",
+        "label": "Cleaned voice",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 5,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "cleaned_voice"
+      },
+      {
+        "column": "common_phrases",
+        "label": "Common phrases",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 6,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": true
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "common_phrases"
+      },
+      {
+        "column": "educations",
+        "label": "Educations",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 7,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": true
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "educations"
+      },
+      {
+        "column": "gender",
+        "label": "Gender",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 8,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "gender"
+      },
+      {
+        "column": "hobbies",
+        "label": "Hobbies",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 9,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": true
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "hobbies"
+      },
+      {
+        "column": "hometown",
+        "label": "Hometown",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 10,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "hometown"
+      },
+      {
+        "column": "interests",
+        "label": "Interests",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 11,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": true
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "interests"
+      },
+      {
+        "column": "jobs",
+        "label": "Jobs",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 12,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": true
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "jobs"
+      },
+      {
+        "column": "life_detail",
+        "label": "Life detail",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 13,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "life_detail"
+      },
+      {
+        "column": "life_detail_cleaned",
+        "label": "Life detail cleaned",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 14,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "life_detail_cleaned"
+      },
+      {
+        "column": "nationality",
+        "label": "Nationality",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 15,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": true
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "nationality"
+      },
+      {
+        "column": "personality",
+        "label": "Personality",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 16,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "personality"
+      },
+      {
+        "column": "processing_error",
+        "label": "Processing error",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 17,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "processing_error"
+      },
+      {
+        "column": "raw_voice",
+        "label": "Raw voice",
+        "hiddenInTable": true,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 18,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "raw_voice"
+      },
+      {
+        "column": "religion",
+        "label": "Religion",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 19,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "religion"
+      },
+      {
+        "column": "slug",
+        "label": "Slug",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 20,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "slug"
+      },
+      {
+        "column": "speaking_style",
+        "label": "Speaking style",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 21,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": true
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "speaking_style"
+      },
+      {
+        "column": "status",
+        "label": "Status",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 22,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "status"
+      },
+      {
+        "column": "voice_text",
+        "label": "Voice text",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 23,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "voice_text"
+      },
+      {
+        "column": "is_deleted",
+        "label": "Is deleted",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": true,
+        "searchable": false,
+        "position": 24,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "checkbox",
+          "asArray": false
+        },
+        "fieldRequirement": "notEmpty",
+        "formFieldSpan": "12",
+        "id": "is_deleted"
+      },
+      {
+        "column": "birth",
+        "label": "Birth",
+        "hiddenInTable": true,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": true,
+        "searchable": false,
+        "position": 25,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "datePicker",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "birth"
+      },
+      {
+        "column": "birth_date",
+        "label": "Birth date",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": true,
+        "searchable": false,
+        "position": 26,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "datePicker",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "birth_date"
+      },
+      {
+        "column": "created_at",
+        "label": "Created at",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": true,
+        "searchable": false,
+        "position": 27,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "dateTimePicker",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "created_at"
+      },
+      {
+        "column": "death_date",
+        "label": "Death date",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": true,
+        "searchable": false,
+        "position": 28,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "datePicker",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "death_date"
+      },
+      {
+        "column": "updated_at",
+        "label": "Updated at",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": true,
+        "searchable": false,
+        "position": 29,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "dateTimePicker",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "updated_at"
+      },
+      {
+        "column": "created_by_user_id",
+        "label": "Tên người tạo",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": false,
+        "position": 30,
+        "relationshipPreviewColumns": [
+          "name"
+        ],
+        "fieldInput": {
+          "type": "recordSelect",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "created_by_user_id"
+      },
+      {
+        "column": "memorial_id",
+        "label": "Memorial",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": false,
+        "position": 31,
+        "relationshipPreviewColumns": [
+          "full_name",
+          "portrait_url"
+        ],
+        "fieldInput": {
+          "type": "recordSelect",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "memorial_id"
+      },
+      {
+        "column": "processing_status",
+        "label": "Processing status",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": false,
+        "position": 32,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "select",
+          "options": [
+            {
+              "label": "PENDING",
+              "value": "PENDING"
+            },
+            {
+              "label": "QUEUED",
+              "value": "QUEUED"
+            },
+            {
+              "label": "PROCESSING",
+              "value": "PROCESSING"
+            },
+            {
+              "label": "COMPLETED",
+              "value": "COMPLETED"
+            },
+            {
+              "label": "FAILED",
+              "value": "FAILED"
+            }
+          ],
+          "asArray": false
+        },
+        "fieldRequirement": "notEmpty",
+        "formFieldSpan": "12",
+        "id": "processing_status"
+      }
+    ]
+  }
+}

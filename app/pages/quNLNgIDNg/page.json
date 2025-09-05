@@ -1,0 +1,227 @@
+{
+  "version": "1.0",
+  "type": "table",
+  "title": "Quản lý người dùng ",
+  "hideInSidebar": false,
+  "config": {
+    "dataSource": "postgres_db_gceijz",
+    "fetchStrategy": "databaseTable",
+    "table": "users",
+    "columns": [
+      {
+        "column": "id",
+        "label": "Id",
+        "hiddenInTable": true,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": false,
+        "position": 0,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "notEmpty",
+        "formFieldSpan": "12",
+        "id": "id"
+      },
+      {
+        "column": "updated_at",
+        "label": "Updated at",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": true,
+        "searchable": false,
+        "position": 1,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "dateTimePicker",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "updated_at"
+      },
+      {
+        "column": "name",
+        "label": "Name",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 2,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "notEmpty",
+        "formFieldSpan": "12",
+        "id": "name"
+      },
+      {
+        "column": "avatar_url",
+        "label": "Avatar url",
+        "hiddenInTable": true,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 3,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "avatar_url"
+      },
+      {
+        "column": "last_sign_in",
+        "label": "Lần đăng nhập cuối",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": true,
+        "searchable": false,
+        "position": 4,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "dateTimePicker",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "last_sign_in"
+      },
+      {
+        "column": "email",
+        "label": "Email",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 5,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "notEmpty",
+        "formFieldSpan": "12",
+        "id": "email"
+      },
+      {
+        "column": "provider",
+        "label": "Provider",
+        "hiddenInTable": true,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 6,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "provider"
+      },
+      {
+        "column": "role",
+        "label": "Phân Quyền",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": false,
+        "searchable": true,
+        "position": 7,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "textarea",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "role"
+      },
+      {
+        "column": "is_deleted",
+        "label": "Is deleted",
+        "hiddenInTable": false,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": true,
+        "searchable": false,
+        "position": 8,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "checkbox",
+          "asArray": false
+        },
+        "fieldRequirement": "notEmpty",
+        "formFieldSpan": "12",
+        "id": "is_deleted"
+      },
+      {
+        "column": "created_at",
+        "label": "Created at",
+        "hiddenInTable": true,
+        "hiddenInForm": false,
+        "filterable": true,
+        "sortable": true,
+        "searchable": false,
+        "position": 9,
+        "relationshipPreviewColumns": [],
+        "fieldInput": {
+          "type": "dateTimePicker",
+          "asArray": false
+        },
+        "fieldRequirement": "none",
+        "formFieldSpan": "12",
+        "id": "created_at"
+      }
+    ],
+    "relationships": [
+      {
+        "key": "memorials_by_created_by_id",
+        "position": 0
+      },
+      {
+        "key": "user_limits_by_user_id",
+        "position": 1
+      },
+      {
+        "key": "profiles_by_created_by_user_id",
+        "position": 2
+      },
+      {
+        "key": "memorial_tributes_by_created_by",
+        "hiddenInTable": true,
+        "position": 3
+      },
+      {
+        "key": "relationships_by_user_id",
+        "hiddenInTable": true,
+        "position": 4
+      },
+      {
+        "key": "profiles_duplicate_by_created_by_user_id",
+        "hiddenInTable": true,
+        "position": 5
+      },
+      {
+        "key": "call_history_by_user_id",
+        "hiddenInTable": true,
+        "position": 6
+      }
+    ]
+  }
+}

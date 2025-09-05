@@ -1,0 +1,39 @@
+{
+  "name": "admin nexcyra",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "dev": "kottster dev",
+    "dev:add-data-source": "kottster add-data-source",
+    "build": "vite build && kottster build:server",
+    "start": "node dist/server/server.cjs"
+  },
+  "dependencies": {
+    "@kottster/cli": "^3.x",
+    "@kottster/common": "^3.x",
+    "@kottster/react": "^3.x",
+    "@kottster/server": "^3.x",
+    "knex": "3.x",
+    "mysql2": "2.3.0",
+    "pg": "8.7.1",
+    "react": "^19.x",
+    "react-dom": "^19.x",
+    "react-router-dom": "^7.x"
+  },
+  "devDependencies": {
+    "@types/node": "^20.x",
+    "@types/react": "^19.x",
+    "@types/react-dom": "^19.x",
+    "@vitejs/plugin-react": "^4.x",
+    "tsx": "^4.x",
+    "typescript": "^5.x",
+    "vite": "^6.x",
+    "vite-tsconfig-paths": "^4.x"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@10.12.1+sha512.f0dda8580f0ee9481c5c79a1d927b9164f2c478e90992ad268bbb2465a736984391d6333d2c327913578b2804af33474ca554ba29c04a8b13060a717675ae3ac"
+}

@@ -15,6 +15,7 @@
     "@kottster/common": "^3.x",
     "@kottster/react": "^3.x",
     "@kottster/server": "^3.x",
+    "dotenv": "^17.2.2",
     "knex": "3.x",
     "mysql2": "2.3.0",
     "pg": "8.7.1",

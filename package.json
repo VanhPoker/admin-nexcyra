@@ -5,10 +5,14 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "dev": "kottster dev",
-    "dev:add-data-source": "kottster add-data-source",
+    "dev": "dotenv -e .env.development -- kottster dev",
+    "dev:add-data-source": "dotenv -e .env.development -- kottster add-data-source",
     "build": "vite build && kottster build:server",
-    "start": "node dist/server/server.cjs"
+    "build:dev": "dotenv -e .env.development -- vite build && dotenv -e .env.development -- kottster build:server",
+    "build:prod": "dotenv -e .env -- vite build && dotenv -e .env -- kottster build:server",
+    "start": "node dist/server/server.cjs",
+    "start:dev": "dotenv -e .env.development -- node dist/server/server.cjs",
+    "start:prod": "dotenv -e .env -- node dist/server/server.cjs"
   },
   "dependencies": {
     "@kottster/cli": "^3.x",
@@ -16,6 +20,7 @@
     "@kottster/react": "^3.x",
     "@kottster/server": "^3.x",
     "dotenv": "^17.2.2",
+    "dotenv-cli": "^7.4.4",
     "knex": "3.x",
     "mysql2": "2.3.0",
     "pg": "8.7.1",

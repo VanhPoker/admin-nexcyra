@@ -1,0 +1,29 @@
+{
+  "version": "1.0",
+  "type": "table",
+  "title": "Quản Lí trang memorial",
+  "hideInSidebar": false,
+  "config": {
+    "dataSource": "postgres_db_gceijz",
+    "fetchStrategy": "databaseTable",
+    "table": "memorials",
+    "columns": [
+      {
+        "column": "id",
+        "hiddenInTable": false
+      },
+      {
+        "column": "portrait_url",
+        "hiddenInTable": false
+      },
+      {
+        "column": "is_public",
+        "hiddenInTable": true
+      },
+      {
+        "column": "updated_at",
+        "hiddenInTable": false
+      }
+    ]
+  }
+}

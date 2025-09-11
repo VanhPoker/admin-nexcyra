@@ -1,0 +1,5 @@
+# Bỏ qua các gói đã cài ở local
+node_modules
+
+# Bỏ qua các file biến môi trường local
+.env

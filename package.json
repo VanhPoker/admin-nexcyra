@@ -7,12 +7,10 @@
   "scripts": {
     "dev": "dotenv -e .env.development -- kottster dev",
     "dev:add-data-source": "dotenv -e .env.development -- kottster add-data-source",
-    "build": "vite build && kottster build:server",
-    "build:dev": "dotenv -e .env.development -- vite build && dotenv -e .env.development -- kottster build:server",
+    "build": "pnpm build:prod",
     "build:prod": "dotenv -e .env -- vite build && dotenv -e .env -- kottster build:server",
     "start": "node dist/server/server.cjs",
-    "start:dev": "dotenv -e .env.development -- node dist/server/server.cjs",
-    "start:prod": "dotenv -e .env -- node dist/server/server.cjs"
+    "vercel-build": "pnpm build:prod"
   },
   "dependencies": {
     "@kottster/cli": "^3.x",

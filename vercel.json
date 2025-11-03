@@ -2,24 +2,27 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",
-      "use": "@vercel/static-build"
+      "src": "dist/server/server.cjs",
+      "use": "@vercel/node"
     },
     {
-      "src": "dist/server/server.cjs",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": [
-          "dist/client/**",
-          "kottster-app.json" 
-        ]
-      }
+      "src": "dist/client/**",
+      "use": "@vercel/static"
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/dist/server/server.cjs"
+      "src": "/assets/(.*)",
+      "dest": "/dist/client/assets/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/dist/server/server.cjs"
     }
-  ]
+  ],
+  "functions": {
+    "dist/server/server.cjs": {
+      "maxDuration": 30
+    }
+  }
 }
